@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - TechPulse</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>TechPulse</h2>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            
+            <div class="nav-actions">
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Search products..." id="search-input">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+                <div class="cart-icon" id="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </div>
+            </div>
+            
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Shopping Cart</h1>
+            <p>Review your selected items before checkout</p>
+        </div>
+    </section>
+
+    <!-- Cart Section -->
+    <section class="cart-section">
+        <div class="container">
+            <div class="cart-layout">
+                <!-- Cart Items -->
+                <div class="cart-items">
+                    <div class="cart-header">
+                        <h2>Your Items</h2>
+                        <button class="clear-cart-btn" id="clear-cart">
+                            <i class="fas fa-trash"></i>
+                            Clear Cart
+                        </button>
+                    </div>
+
+                    <div class="cart-items-list" id="cart-items-list">
+                        <!-- Cart items will be loaded dynamically -->
+                    </div>
+
+                    <div class="empty-cart" id="empty-cart" style="display: none;">
+                        <div class="empty-cart-content">
+                            <i class="fas fa-shopping-cart"></i>
+                            <h3>Your cart is empty</h3>
+                            <p>Looks like you haven't added anything to your cart yet.</p>
+                            <a href="products.html" class="continue-shopping-btn">Continue Shopping</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cart Summary -->
+                <div class="cart-summary">
+                    <div class="summary-card">
+                        <h3>Order Summary</h3>
+                        
+                        <div class="summary-row">
+                            <span>Subtotal (<span id="total-items">0</span> items)</span>
+                            <span id="subtotal">$0.00</span>
+                        </div>
+                        
+                        <div class="summary-row">
+                            <span>Shipping</span>
+                            <span id="shipping">Free</span>
+                        </div>
+                        
+                        <div class="summary-row">
+                            <span>Tax</span>
+                            <span id="tax">$0.00</span>
+                        </div>
+                        
+                        <div class="summary-divider"></div>
+                        
+                        <div class="summary-row total">
+                            <span>Total</span>
+                            <span id="total">$0.00</span>
+                        </div>
+
+                        <div class="promo-code">
+                            <input type="text" placeholder="Enter promo code" id="promo-input">
+                            <button class="apply-promo-btn" id="apply-promo">Apply</button>
+                        </div>
+
+                        <div class="checkout-actions">
+                            <button class="checkout-btn" id="checkout-btn">
+                                <i class="fas fa-lock"></i>
+                                Proceed to Checkout
+                            </button>
+                            <a href="products.html" class="continue-shopping-link">Continue Shopping</a>
+                        </div>
+
+                        <div class="security-badges">
+                            <div class="badge">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Secure Checkout</span>
+                            </div>
+                            <div class="badge">
+                                <i class="fas fa-truck"></i>
+                                <span>Free Shipping</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recommended Products -->
+                    <div class="recommended-products">
+                        <h3>You might also like</h3>
+                        <div class="recommended-items" id="recommended-items">
+                            <!-- Recommended products will be loaded dynamically -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TechPulse</h3>
+                    <p>Your ultimate destination for the latest gadgets and technology.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="products.html?category=smartphones">Smartphones</a></li>
+                        <li><a href="products.html?category=laptops">Laptops</a></li>
+                        <li><a href="products.html?category=wearables">Wearables</a></li>
+                        <li><a href="products.html?category=accessories">Accessories</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 TechPulse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Checkout Success Modal -->
+    <div class="modal" id="checkout-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Order Placed Successfully!</h3>
+                <button class="close-modal" id="close-checkout-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="success-message">
+                    <i class="fas fa-check-circle"></i>
+                    <p>Thank you for your order! You will receive a confirmation email shortly.</p>
+                    <div class="order-details">
+                        <p><strong>Order Number:</strong> <span id="order-number">#12345</span></p>
+                        <p><strong>Total:</strong> <span id="order-total">$0.00</span></p>
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <a href="index.html" class="continue-shopping-btn">Continue Shopping</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="data/products.js"></script>
+    <script src="scripts/cart.js"></script>
+    <script>
+        // Initialize cart page functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeCartPage();
+        });
+
+        function initializeCartPage() {
+            loadCartItems();
+            setupEventListeners();
+            loadRecommendedProducts();
+        }
+
+        function setupEventListeners() {
+            // Clear cart button
+            document.getElementById('clear-cart').addEventListener('click', function() {
+                if (confirm('Are you sure you want to clear your cart?')) {
+                    clearCart();
+                    loadCartItems();
+                }
+            });
+
+            // Checkout button
+            document.getElementById('checkout-btn').addEventListener('click', function() {
+                const cart = getCart();
+                if (cart.length === 0) {
+                    alert('Your cart is empty!');
+                    return;
+                }
+                
+                // Generate order number
+                const orderNumber = '#' + Math.random().toString(36).substr(2, 9).toUpperCase();
+                document.getElementById('order-number').textContent = orderNumber;
+                document.getElementById('order-total').textContent = document.getElementById('total').textContent;
+                
+                // Show success modal
+                document.getElementById('checkout-modal').style.display = 'flex';
+                
+                // Clear cart after successful checkout
+                clearCart();
+                updateCartIcon();
+            });
+
+            // Close modal
+            document.getElementById('close-checkout-modal').addEventListener('click', function() {
+                document.getElementById('checkout-modal').style.display = 'none';
+                window.location.href = 'index.html';
+            });
+
+            // Promo code
+            document.getElementById('apply-promo').addEventListener('click', function() {
+                const promoCode = document.getElementById('promo-input').value.trim();
+                if (promoCode === 'SAVE10') {
+                    alert('Promo code applied! 10% discount added.');
+                    calculateCartTotal();
+                } else if (promoCode) {
+                    alert('Invalid promo code.');
+                }
+            });
+        }
+
+        function loadCartItems() {
+            const cart = getCart();
+            const cartItemsList = document.getElementById('cart-items-list');
+            const emptyCart = document.getElementById('empty-cart');
+
+            if (cart.length === 0) {
+                cartItemsList.style.display = 'none';
+                emptyCart.style.display = 'block';
+                return;
+            }
+
+            cartItemsList.style.display = 'block';
+            emptyCart.style.display = 'none';
+
+            cartItemsList.innerHTML = cart.map(item => `
+                <div class="cart-item" data-id="${item.id}">
+                    <div class="item-image">
+                        <img src="${item.image}" alt="${item.name}">
+                    </div>
+                    <div class="item-details">
+                        <h3>${item.name}</h3>
+                        <p class="item-category">${item.category}</p>
+                        <p class="item-price">$${item.price}</p>
+                    </div>
+                    <div class="item-quantity">
+                        <button class="qty-btn decrease" onclick="updateQuantity(${item.id}, ${item.quantity - 1})">-</button>
+                        <span class="quantity">${item.quantity}</span>
+                        <button class="qty-btn increase" onclick="updateQuantity(${item.id}, ${item.quantity + 1})">+</button>
+                    </div>
+                    <div class="item-total">
+                        <span>$${(item.price * item.quantity).toFixed(2)}</span>
+                    </div>
+                    <div class="item-actions">
+                        <button class="remove-btn" onclick="removeFromCart(${item.id})">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+
+            calculateCartTotal();
+        }
+
+        function updateQuantity(productId, newQuantity) {
+            if (newQuantity <= 0) {
+                removeFromCart(productId);
+                return;
+            }
+
+            let cart = getCart();
+            const itemIndex = cart.findIndex(item => item.id === productId);
+            
+            if (itemIndex !== -1) {
+                cart[itemIndex].quantity = newQuantity;
+                saveCart(cart);
+                loadCartItems();
+                updateCartIcon();
+            }
+        }
+
+        function calculateCartTotal() {
+            const cart = getCart();
+            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            const tax = subtotal * 0.08; // 8% tax
+            const shipping = subtotal > 99 ? 0 : 9.99;
+            const total = subtotal + tax + shipping;
+
+            document.getElementById('total-items').textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
+            document.getElementById('subtotal').textContent = `$${subtotal.toFixed(2)}`;
+            document.getElementById('tax').textContent = `$${tax.toFixed(2)}`;
+            document.getElementById('shipping').textContent = shipping === 0 ? 'Free' : `$${shipping.toFixed(2)}`;
+            document.getElementById('total').textContent = `$${total.toFixed(2)}`;
+        }
+
+        function loadRecommendedProducts() {
+            const recommended = products.slice(0, 3);
+            const recommendedContainer = document.getElementById('recommended-items');
+
+            recommendedContainer.innerHTML = recommended.map(product => `
+                <div class="recommended-item">
+                    <img src="${product.image}" alt="${product.name}">
+                    <h4>${product.name}</h4>
+                    <span class="price">$${product.price}</span>
+                    <button class="add-btn" onclick="addToCart(${product.id})">Add to Cart</button>
+                </div>
+            `).join('');
+        }
+
+        // Make functions global for onclick handlers
+        window.updateQuantity = updateQuantity;
+        window.removeFromCart = removeFromCart;
+        window.addToCart = addToCart;
+    </script>
+</body>
+</html>

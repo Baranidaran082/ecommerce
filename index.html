@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechPulse - Your Ultimate Gadget Destination</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <h2>TechPulse</h2>
+        </div>
+
+        <div class="nav-menu" id="nav-menu">
+          <a href="index.html" class="nav-link active">Home</a>
+          <a href="products.html" class="nav-link">Products</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+
+        <div class="nav-actions">
+          <!-- <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Search products..." id="search-input">
+                    <i class="fas fa-search search-icon"></i>
+                </div> -->
+          <div class="cart-icon" id="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count" id="cart-count">0</span>
+          </div>
+        </div>
+
+        <div class="hamburger" id="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Your Ultimate Gadget Destination</h1>
+        <p class="hero-subtitle">
+          Discover the latest technology and cutting-edge electronics that power
+          your digital life
+        </p>
+        <a href="products.html" class="cta-button">Shop Now</a>
+      </div>
+      <div class="hero-image">
+        <img
+          src="./images/hero-imagge.png"
+          alt="Gadget Showcase"
+          class="hero-img"
+        />
+      </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="featured-categories">
+      <div class="container">
+        <h2 class="section-title">Featured Categories</h2>
+        <div class="categories-grid">
+          <div class="category-card" data-category="smartphones">
+            <div class="category-icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h3>Smartphones</h3>
+            <p>Latest flagship devices</p>
+          </div>
+          <div class="category-card" data-category="laptops">
+            <div class="category-icon">
+              <i class="fas fa-laptop"></i>
+            </div>
+            <h3>Laptops</h3>
+            <p>Powerful computing solutions</p>
+          </div>
+          <div class="category-card" data-category="wearables">
+            <div class="category-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h3>Wearables</h3>
+            <p>Smart watches & fitness trackers</p>
+          </div>
+          <div class="category-card" data-category="accessories">
+            <div class="category-icon">
+              <i class="fas fa-headphones"></i>
+            </div>
+            <h3>Accessories</h3>
+            <p>Essential tech add-ons</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trending Products -->
+    <section class="trending-products">
+      <div class="container">
+        <h2 class="section-title">Trending Products</h2>
+        <div class="products-grid" id="trending-products-grid">
+          <!-- Products will be loaded dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Customer Reviews -->
+    <section class="customer-reviews">
+      <div class="container">
+        <h2 class="section-title">What Our Customers Say</h2>
+        <div class="reviews-slider" id="reviews-slider">
+          <div class="review-card active">
+            <div class="review-content">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p>
+                "TechPulse has the best selection of gadgets at unbeatable
+                prices. Fast shipping and excellent customer service!"
+              </p>
+              <div class="reviewer">
+                <img
+                  src="https://pixabay.com/get/ged5fb5d1d67e55d7392081eec42accd64576ee257eb483641fd5a023f0c5d6c13bc942d343ff363bf697644e3ac85f614c43f06f661522e611006f8f8afc25a0_1280.jpg"
+                  alt="Sarah Johnson"
+                />
+                <div class="reviewer-info">
+                  <h4>Sarah Johnson</h4>
+                  <span>Verified Buyer</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-content">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p>
+                "Amazing quality products and lightning-fast delivery. TechPulse
+                is now my go-to store for all tech needs!"
+              </p>
+              <div class="reviewer">
+                <img
+                  src="https://pixabay.com/get/gaa2c982d6e370a75881963e837585ced04bd5c32c4b295a27cd4435d1eeb1d01a2fe5d555586026b4b39faa5dc4011232aa0ca9bfe971bd582d4aab5bff4c0c7_1280.jpg"
+                  alt="Michael Chen"
+                />
+                <div class="reviewer-info">
+                  <h4>Michael Chen</h4>
+                  <span>Tech Enthusiast</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-content">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p>
+                "Incredible user experience and top-notch products. The website
+                is easy to navigate and the prices are fantastic!"
+              </p>
+              <div class="reviewer">
+                <img
+                  src="https://pixabay.com/get/gff8d4481a1e9d777a195f1106470c8bafbeeb7bd1d2d00b26938c1d0cc37fcc69c73596dd1be2e9cc94c23a75326d902ef57ccce6da55c1caa3d4a4bc6b18db0_1280.jpg"
+                  alt="Alex Rodriguez"
+                />
+                <div class="reviewer-info">
+                  <h4>Alex Rodriguez</h4>
+                  <span>Happy Customer</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slider-controls">
+          <button class="slider-btn prev-btn" id="prev-btn">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="slider-dots" id="slider-dots">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+          </div>
+          <button class="slider-btn next-btn" id="next-btn">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+      <div class="container">
+        <div class="newsletter-content">
+          <h2>Stay Updated</h2>
+          <p>
+            Get the latest tech news and exclusive deals delivered to your inbox
+          </p>
+          <form class="newsletter-form" id="newsletter-form">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              id="newsletter-email"
+              required
+            />
+            <button type="submit" class="subscribe-btn">Subscribe</button>
+          </form>
+          <div class="newsletter-message" id="newsletter-message"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>TechPulse</h3>
+            <p>
+              Your ultimate destination for the latest gadgets and technology.
+            </p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Categories</h4>
+            <ul>
+              <li>
+                <a href="products.html?category=smartphones">Smartphones</a>
+              </li>
+              <li><a href="products.html?category=laptops">Laptops</a></li>
+              <li><a href="products.html?category=wearables">Wearables</a></li>
+              <li>
+                <a href="products.html?category=accessories">Accessories</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Shipping Info</a></li>
+              <li><a href="#">Returns</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2024 TechPulse. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="data/products.js"></script>
+    <script src="scripts/cart.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

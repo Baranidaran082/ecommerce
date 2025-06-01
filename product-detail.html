@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details - TechPulse</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <h2>TechPulse</h2>
+        </div>
+
+        <div class="nav-menu" id="nav-menu">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="products.html" class="nav-link">Products</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+
+        <div class="nav-actions">
+          <!-- <div class="search-container">
+            <input
+              type="text"
+              class="search-input"
+              placeholder="Search products..."
+              id="search-input"
+            />
+            <i class="fas fa-search search-icon"></i>
+          </div> -->
+          <div class="cart-icon" id="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count" id="cart-count">0</span>
+          </div>
+        </div>
+
+        <div class="hamburger" id="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+      <div class="container">
+        <nav class="breadcrumb-nav">
+          <a href="index.html">Home</a>
+          <span class="separator">></span>
+          <a href="products.html">Products</a>
+          <span class="separator">></span>
+          <span id="breadcrumb-category">Category</span>
+          <span class="separator">></span>
+          <span id="breadcrumb-product">Product</span>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Product Detail -->
+    <section class="product-detail">
+      <div class="container">
+        <div class="product-layout">
+          <!-- Product Images -->
+          <div class="product-images">
+            <div class="main-image">
+              <img id="main-product-image" src="" alt="Product Image" />
+              <div class="image-zoom-overlay" id="zoom-overlay"></div>
+            </div>
+            <div class="thumbnail-images" id="thumbnail-images">
+              <!-- Thumbnails will be loaded dynamically -->
+            </div>
+          </div>
+
+          <!-- Product Info -->
+          <div class="product-info">
+            <div class="product-category" id="product-category"></div>
+            <h1 class="product-title" id="product-title"></h1>
+
+            <div class="product-rating">
+              <div class="stars" id="product-stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="rating-text" id="rating-text"
+                >(4.8) 324 reviews</span
+              >
+            </div>
+
+            <div class="product-price">
+              <span class="current-price" id="current-price">$0</span>
+              <span
+                class="original-price"
+                id="original-price"
+                style="display: none"
+                >$0</span
+              >
+              <span
+                class="discount-badge"
+                id="discount-badge"
+                style="display: none"
+                >-0%</span
+              >
+            </div>
+
+            <div class="product-description" id="product-description">
+              <!-- Description will be loaded dynamically -->
+            </div>
+
+            <div class="product-specs" id="product-specs">
+              <!-- Specifications will be loaded dynamically -->
+            </div>
+
+            <div class="product-actions">
+              <div class="quantity-selector">
+                <!-- <label for="quantity">Quantity:</label> -->
+                <!-- <div class="quantity-controls">
+                  <button class="quantity-btn" id="decrease-qty">-</button>
+                  <input
+                    type="number"
+                    id="quantity-input"
+                    value="1"
+                    min="1"
+                    max="10"
+                  />
+                  <button class="quantity-btn" id="increase-qty">+</button>
+                </div>
+              </div> -->
+
+              <div class="action-buttons">
+                <button class="add-to-cart-btn" id="add-to-cart-btn">
+                  <i class="fas fa-shopping-cart"></i>
+                  Add to Cart
+                </button>
+                <!-- <button class="wishlist-btn" id="wishlist-btn">
+                  <i class="far fa-heart"></i>
+                </button> -->
+              </div>
+            </div>
+
+            <div class="product-features">
+              <div class="feature">
+                <i class="fas fa-shipping-fast"></i>
+                <span>Free shipping on orders over $99</span>
+              </div>
+              <div class="feature">
+                <i class="fas fa-undo"></i>
+                <span>30-day return policy</span>
+              </div>
+              <div class="feature">
+                <i class="fas fa-shield-alt"></i>
+                <span>2-year warranty included</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Tabs -->
+        <div class="product-tabs">
+          <div class="tab-buttons">
+            <button class="tab-btn active" data-tab="description">
+              Description
+            </button>
+            <button class="tab-btn" data-tab="specifications">
+              Specifications
+            </button>
+            <button class="tab-btn" data-tab="reviews">Reviews</button>
+          </div>
+
+          <div class="tab-content">
+            <div class="tab-panel active" id="description-tab">
+              <div class="tab-panel-content" id="detailed-description">
+                <!-- Detailed description will be loaded dynamically -->
+              </div>
+            </div>
+
+            <div class="tab-panel" id="specifications-tab">
+              <div class="tab-panel-content" id="detailed-specs">
+                <!-- Detailed specifications will be loaded dynamically -->
+              </div>
+            </div>
+
+            <div class="tab-panel" id="reviews-tab">
+              <div class="tab-panel-content">
+                <div class="reviews-summary">
+                  <div class="rating-overview">
+                    <div class="average-rating">
+                      <span class="rating-number">4.8</span>
+                      <div class="rating-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                      <span class="total-reviews">Based on 324 reviews</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="reviews-list">
+                  <div class="review-item">
+                    <div class="review-header">
+                      <div class="reviewer-info">
+                        <strong>John D.</strong>
+                        <span class="review-date">2 weeks ago</span>
+                      </div>
+                      <div class="review-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                    </div>
+                    <p class="review-text">
+                      Excellent product! Exceeded my expectations in every way.
+                      Fast delivery and great packaging.
+                    </p>
+                  </div>
+
+                  <div class="review-item">
+                    <div class="review-header">
+                      <div class="reviewer-info">
+                        <strong>Sarah M.</strong>
+                        <span class="review-date">1 month ago</span>
+                      </div>
+                      <div class="review-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                      </div>
+                    </div>
+                    <p class="review-text">
+                      Great value for money. The build quality is impressive and
+                      it works exactly as described.
+                    </p>
+                  </div>
+
+                  <div class="review-item">
+                    <div class="review-header">
+                      <div class="reviewer-info">
+                        <strong>Mike R.</strong>
+                        <span class="review-date">2 months ago</span>
+                      </div>
+                      <div class="review-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                    </div>
+                    <p class="review-text">
+                      Perfect! Exactly what I was looking for. Highly recommend
+                      this product to anyone.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Related Products -->
+        <!-- <div class="related-products">
+          <h2>Related Products</h2>
+          <div class="products-grid" id="related-products-grid"> -->
+        <!-- Related products will be loaded dynamically -->
+        <!-- </div>
+        </div> -->
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>TechPulse</h3>
+            <p>
+              Your ultimate destination for the latest gadgets and technology.
+            </p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Categories</h4>
+            <ul>
+              <li>
+                <a href="products.html?category=smartphones">Smartphones</a>
+              </li>
+              <li><a href="products.html?category=laptops">Laptops</a></li>
+              <li><a href="products.html?category=wearables">Wearables</a></li>
+              <li>
+                <a href="products.html?category=accessories">Accessories</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Shipping Info</a></li>
+              <li><a href="#">Returns</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2024 TechPulse. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Add to Cart Success Modal -->
+    <div class="modal" id="add-to-cart-modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Added to Cart!</h3>
+          <button class="close-modal" id="close-modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="success-message">
+            <i class="fas fa-check-circle"></i>
+            <p>Product has been added to your cart successfully.</p>
+          </div>
+          <div class="modal-actions">
+            <button class="continue-shopping-btn" id="continue-shopping">
+              Continue Shopping
+            </button>
+            <a href="cart.html" class="view-cart-btn">View Cart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="data/products.js"></script>
+    <script src="scripts/cart.js"></script>
+    <script src="scripts/product-detail.js"></script>
+  </body>
+</html>
